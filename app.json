@@ -3,9 +3,7 @@
     "name": "CheckInKu Pro",
     "slug": "checkinku-pro",
     "version": "1.0.0",
-
     "orientation": "portrait",
-
     "plugins": [
       [
         "expo-image-picker",
@@ -20,6 +18,14 @@
           "locationWhenInUsePermission": "CheckInKu Pro membutuhkan lokasi untuk menyimpan data check-in."
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "f77f78c6-4987-43d3-b724-b6de18fe0f34"
+      }
+    },
+    "android": {
+      "package": "com.ruthangelsitorus.checkinkupro"
+    }
   }
 }
