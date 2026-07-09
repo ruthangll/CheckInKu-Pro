@@ -1,24 +1,25 @@
 {
   "expo": {
-    "name": "CheckInku",
-    "slug": "CheckInku",
+    "name": "CheckInKu Pro",
+    "slug": "checkinku-pro",
     "version": "1.0.0",
+
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
-      }
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
+
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "CheckInKu Pro membutuhkan akses galeri untuk memilih foto check-in.",
+          "cameraPermission": "CheckInKu Pro membutuhkan akses kamera untuk mengambil foto check-in."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "CheckInKu Pro membutuhkan lokasi untuk menyimpan data check-in."
+        }
+      ]
+    ]
   }
 }
