@@ -4,6 +4,9 @@
     "slug": "checkinku-pro",
     "version": "1.0.0",
     "orientation": "portrait",
+
+    "icon": "./assets/icon.png",
+
     "plugins": [
       [
         "expo-image-picker",
@@ -19,13 +22,31 @@
         }
       ]
     ],
+
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0A84FF"
+    },
+
+    "android": {
+      "package": "com.ruthangelsitorus.checkinkupro",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0A84FF"
+      },
+      "permissions": [
+        "CAMERA",
+        "READ_MEDIA_IMAGES",
+        "ACCESS_FINE_LOCATION"
+      ]
+    },
+
     "extra": {
       "eas": {
         "projectId": "f77f78c6-4987-43d3-b724-b6de18fe0f34"
       }
-    },
-    "android": {
-      "package": "com.ruthangelsitorus.checkinkupro"
     }
   }
 }

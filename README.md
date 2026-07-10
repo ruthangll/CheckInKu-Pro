@@ -1,93 +1,227 @@
 # 📍 CheckInKu Pro
-## Native Power App — React Native Expo
-CheckInKu Pro merupakan aplikasi mobile berbasis **React Native Expo** yang memanfaatkan fitur native smartphone seperti kamera, galeri, GPS, dan permission flow.
-Aplikasi ini memungkinkan pengguna melakukan proses check-in dengan mengambil foto, mendapatkan lokasi pengguna secara real-time, menampilkan koordinat GPS, informasi nama lokasi, serta informasi cuaca berdasarkan lokasi pengguna.
-Aplikasi ini dibuat untuk memenuhi tugas:
-**Misi 13 — Native Power App**  
-**Praktikum Pemrograman Mobile (React Native)**
+
+## 🚀 Release Candidate — React Native Expo + EAS Build
+
+CheckInKu Pro merupakan aplikasi mobile berbasis **React Native Expo** yang memanfaatkan fitur native smartphone seperti kamera, galeri, GPS, dan permission system.
+
+Aplikasi ini digunakan untuk melakukan proses **check-in digital** dengan mengambil foto, memperoleh lokasi pengguna secara real-time, menampilkan koordinat GPS, informasi lokasi, serta informasi cuaca berdasarkan lokasi pengguna.
+
+Project ini dikembangkan sebagai implementasi **Misi 14 — Menyiapkan Aplikasi untuk Rilis (Release Candidate)** pada mata kuliah Praktik Pemrograman Mobile (React Native).
+
+Tahapan pengembangan meliputi:
+- Konfigurasi aplikasi menggunakan Expo.
+- Pengaturan app.json.
+- Pembuatan custom icon dan splash screen.
+- Proses EAS Build.
+- Menghasilkan APK Android.
+- Instalasi APK pada perangkat Android tanpa menggunakan Expo Go.
+
+
 ---
-# 📱 Fitur Native yang Digunakan
-## 📸 Camera (Kamera)
-Aplikasi menggunakan kamera perangkat untuk mengambil foto pengguna.
+
+# 📱 Fitur Utama Aplikasi
+
+## 📸 Camera Check-In
+
+Aplikasi menggunakan kamera smartphone untuk mengambil foto sebagai dokumentasi aktivitas check-in.
+
 Implementasi:
-- Meminta izin kamera melalui permission flow.
-- Membuka kamera setelah izin diberikan.
-- Mengambil hasil foto menggunakan URI.
-- Menampilkan foto pada aplikasi.
-## 🖼 Image Gallery (Galeri)
-Aplikasi menyediakan fitur pemilihan foto dari galeri perangkat.
+- Meminta izin akses kamera.
+- Membuka kamera perangkat.
+- Mengambil foto menggunakan kamera.
+- Menampilkan hasil foto pada aplikasi.
+
+
+---
+
+## 🖼 Gallery Integration
+
+Pengguna dapat memilih foto dari galeri perangkat.
+
 Implementasi:
 - Meminta izin akses galeri.
-- Memilih foto dari penyimpanan perangkat.
-- Menampilkan foto pilihan pengguna.
+- Membuka penyimpanan gambar perangkat.
+- Memilih foto pengguna.
+- Menampilkan foto pilihan pada halaman aplikasi.
+
+
+---
+
 ## 📍 GPS Location
+
 Aplikasi menggunakan GPS perangkat untuk mendapatkan lokasi pengguna.
+
 Informasi yang ditampilkan:
-- Latitude
-- Longitude
-- Nama lokasi
-## 🔐 Permission Flow
-Aplikasi menerapkan alur permission yang benar:
-1. Request izin akses perangkat.
-2. Mengecek status izin (`granted`).
-3. Mengakses fitur apabila izin diberikan.
-4. Memberikan pesan ramah apabila izin ditolak.
-5. Aplikasi tetap berjalan tanpa mengalami crash.
+- Latitude.
+- Longitude.
+- Nama lokasi.
+- Informasi lokasi berdasarkan koordinat GPS.
+
+
 ---
-# 🚀 Daftar Fitur Aplikasi
-## 🟢 Level 1 — Core Feature
-✅ Mengakses fitur kamera perangkat.  
-✅ Mengakses fitur galeri perangkat.  
-✅ Mengambil lokasi pengguna menggunakan GPS.  
-✅ Menampilkan hasil foto pada aplikasi.  
-✅ Menampilkan koordinat lokasi pengguna.  
-✅ Menangani penolakan permission tanpa menyebabkan aplikasi crash.
+
+## 🌤 Weather Information
+
+Aplikasi menampilkan informasi cuaca berdasarkan lokasi pengguna.
+
+Fitur:
+- Mengambil koordinat lokasi pengguna.
+- Menghubungkan lokasi dengan layanan cuaca.
+- Menampilkan kondisi cuaca berdasarkan lokasi.
+
+
 ---
-# 🟡 Level 2 — Pengembangan Fitur
-## ✅ Camera + Gallery
-Pengguna dapat memilih sumber foto melalui pilihan:
-- 📸 Kamera
-- 🖼 Galeri
-Pemilihan sumber foto dilakukan melalui dialog pilihan.
-## ✅ Camera + Location
-Foto yang diambil dapat dikombinasikan dengan informasi lokasi pengguna.
-Data yang ditampilkan:
-- Foto pengguna
-- Latitude
-- Longitude
-- Informasi lokasi
-## ✅ Persistensi Data (AsyncStorage)
-Aplikasi menggunakan AsyncStorage untuk menyimpan data secara lokal.
-Data yang disimpan:
-- Foto profil
-- Nama pengguna
-- Informasi lokasi
-Data tetap tersedia ketika aplikasi dibuka kembali.
-## ✅ Open Location in Maps
-Pengguna dapat membuka lokasi berdasarkan koordinat GPS melalui Google Maps.
+
+# 🔐 Native Permission System
+
+Aplikasi menerapkan sistem permission native Android.
+
+Permission yang digunakan:
+
+### CAMERA
+Digunakan untuk mengambil foto check-in melalui kamera perangkat.
+
+### READ_MEDIA_IMAGES
+Digunakan untuk memilih foto dari galeri.
+
+### ACCESS_FINE_LOCATION
+Digunakan untuk mendapatkan lokasi pengguna melalui GPS.
+
+Apabila permission ditolak, aplikasi tetap berjalan tanpa mengalami crash.
+
+
 ---
-# 🌟 Bonus Feature
-## ✅ Priming Screen
-Menampilkan informasi awal mengenai penggunaan fitur kamera dan lokasi sebelum permission sistem muncul.
-## ✅ Reverse Geocoding
-Mengubah koordinat GPS menjadi informasi nama lokasi yang lebih mudah dipahami.
-## ✅ Weather Information
-Menampilkan informasi cuaca berdasarkan lokasi pengguna menggunakan Open-Meteo API.
+
+# 📦 Release Build Information
+
+## EAS Build Configuration
+
+Aplikasi telah dikonfigurasi menggunakan:
+
+- Expo Application Services (EAS)
+- EAS CLI
+- Android APK Build
+
+Build Profile:
+
+```
+preview
+```
+
+Output:
+
+```
+Android APK
+```
+
+Perintah build:
+
+```bash
+eas build --platform android --profile preview
+```
+
+Status Build:
+
+```
+FINISHED ✅
+```
+
+
 ---
-# 📸 Screenshot Aplikasi
-## 1. Hasil Foto, Lokasi, dan Cuaca
-![Foto Lokasi Cuaca](screenshots/02_profile_foto_lokasi_cuaca.jpeg)
-## 2. Dialog Pilihan Kamera dan Galeri
-![Kamera Galeri](screenshots/03_kamera_galeri.jpeg)
-## 3. Penanganan Penolakan Permission
-![Permission Ditolak](screenshots/04_permission_ditolak.jpeg)
-## 4. Priming Screen
-![Priming Screen](screenshots/01_priming_screen.jpeg)
-## 5. Membuka Lokasi melalui Google Maps
-![Google Maps](screenshots/05_google_maps.jpeg)
+
+# 📥 APK Installation
+
+APK hasil build dapat di-install langsung pada perangkat Android tanpa menggunakan Expo Go.
+
+## 🔗 EAS Build Link
+
+https://expo.dev/accounts/ruthangelsitorus/projects/checkinku-pro/builds/dd0f45fe-e5ed-43ba-b4ab-03b33c427bbf
+
+Melalui link tersebut pengguna dapat melihat hasil build EAS dan melakukan instalasi APK.
+
+
 ---
+
+# 🎨 Build Assets
+
+Aplikasi menggunakan asset custom untuk kebutuhan release.
+
+
+## App Icon
+
+File:
+
+```
+assets/icon.png
+```
+
+Spesifikasi:
+
+- Format PNG.
+- Ukuran 1024 × 1024 px.
+- Desain khusus aplikasi CheckInKu Pro.
+
+
+---
+
+## Adaptive Icon
+
+File:
+
+```
+assets/adaptive-icon.png
+```
+
+Digunakan sebagai icon launcher Android dengan logo berada di tengah dan memiliki padding.
+
+
+---
+
+## Splash Screen
+
+File:
+
+```
+assets/splash.png
+```
+
+Digunakan sebagai tampilan awal aplikasi saat aplikasi dibuka.
+
+Background:
+
+```
+#0A84FF
+```
+
+
+---
+
+# 📸 Screenshot Bukti Aplikasi
+
+Screenshot dokumentasi tersedia pada folder:
+
+```
+screenshots/
+```
+
+Bukti yang disertakan:
+
+1. EAS Build Finished.
+2. EAS Dashboard Build.
+3. Instalasi APK.
+4. Struktur Project.
+5. Splash Screen aplikasi.
+6. Permission Screen.
+7. Halaman Check-In Camera & Location.
+8. Icon aplikasi pada Home Screen.
+
+
+---
+
 # 🛠 Tech Stack
+
 Teknologi yang digunakan:
+
 - React Native
 - Expo
 - JavaScript
@@ -96,63 +230,102 @@ Teknologi yang digunakan:
 - AsyncStorage
 - Linking API
 - Open-Meteo Weather API
+- Expo Application Services (EAS)
+
+
 ---
+
 # ▶️ Cara Menjalankan Project
+
 ## 1. Clone Repository
+
 ```bash
 git clone https://github.com/ruthangll/CheckInKu-Pro.git
+```
 
-1. Masuk ke Folder Project
 
+## 2. Masuk Folder Project
+
+```bash
 cd CheckInKu-Pro
+```
 
-1. Install Dependency
 
+## 3. Install Dependency
+
+```bash
 npm install
+```
 
-1. Jalankan Aplikasi
 
+## 4. Jalankan Project
+
+```bash
 npx expo start
+```
 
-Kemudian scan QR Code menggunakan aplikasi Expo Go pada smartphone.
+Aplikasi dapat dijalankan menggunakan:
 
-⸻
+- Expo Go.
+- Android APK hasil EAS Build.
 
-🔗 Expo Snack
+
+---
+
+# 🔗 Expo Snack
 
 Versi interaktif aplikasi dapat dicoba melalui Expo Snack:
 
 https://snack.expo.dev/@ruthangelsitorus/checkinku-proo
 
-⸻
 
-📂 Struktur Project
+---
 
+# 📂 Struktur Project
+
+```
 CheckInKu-Pro
 │
 ├── App.js
 ├── app.json
+├── eas.json
 ├── package.json
 ├── README.md
 │
 ├── assets
+│   ├── icon.png
+│   ├── adaptive-icon.png
+│   └── splash.png
 │
 └── screenshots
-    ├── 01_priming_screen.jpeg
-    ├── 02_profile_foto_lokasi_cuaca.jpeg
-    ├── 03_kamera_galeri.jpeg
-    ├── 04_permission_ditolak.jpeg
-    └── 05_google_maps.jpeg
+    ├── 01_eas_build_finished.jpeg
+    ├── 02_eas_dashboard_finished.jpeg
+    ├── 03_install_apk.jpeg
+    ├── 04_project_structure.jpeg
+    ├── 05_splash_screen_aplikasi.jpeg
+    ├── 06_home_permission_screen.jpeg
+    ├── 07_checkin_camera_location_screen.jpeg
+    └── 08_app_icon_home_screen.jpeg
 
-⸻
+```
 
-👩‍💻 Developer
 
-Ruth Angel Sitorus
+---
+
+# 👩‍💻 Developer
+
+**Ruth Angel Sitorus**
+
 Universitas Prima Indonesia
 
 Mata Kuliah:
+
 Praktek Pemrograman Mobile (React Native)
 
-Project: CheckInKu Pro
-Mission: Misi 13 — Native Power App
+Project:
+
+**CheckInKu Pro**
+
+Mission:
+
+**Misi 14 — Menyiapkan Aplikasi untuk Rilis (Release Candidate)**
