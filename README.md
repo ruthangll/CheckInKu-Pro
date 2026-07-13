@@ -9,13 +9,13 @@ Aplikasi ini digunakan untuk melakukan proses **check-in digital** dengan mengam
 Project ini dikembangkan sebagai implementasi **Misi 14 — Menyiapkan Aplikasi untuk Rilis (Release Candidate)** pada mata kuliah Praktik Pemrograman Mobile (React Native).
 
 Tahapan pengembangan meliputi:
+
 - Konfigurasi aplikasi menggunakan Expo.
 - Pengaturan app.json.
 - Pembuatan custom icon dan splash screen.
 - Proses EAS Build.
 - Menghasilkan APK Android.
 - Instalasi APK pada perangkat Android tanpa menggunakan Expo Go.
-
 
 ---
 
@@ -26,11 +26,11 @@ Tahapan pengembangan meliputi:
 Aplikasi menggunakan kamera smartphone untuk mengambil foto sebagai dokumentasi aktivitas check-in.
 
 Implementasi:
+
 - Meminta izin akses kamera.
 - Membuka kamera perangkat.
 - Mengambil foto menggunakan kamera.
 - Menampilkan hasil foto pada aplikasi.
-
 
 ---
 
@@ -39,11 +39,11 @@ Implementasi:
 Pengguna dapat memilih foto dari galeri perangkat.
 
 Implementasi:
+
 - Meminta izin akses galeri.
 - Membuka penyimpanan gambar perangkat.
 - Memilih foto pengguna.
 - Menampilkan foto pilihan pada halaman aplikasi.
-
 
 ---
 
@@ -52,11 +52,11 @@ Implementasi:
 Aplikasi menggunakan GPS perangkat untuk mendapatkan lokasi pengguna.
 
 Informasi yang ditampilkan:
+
 - Latitude.
 - Longitude.
 - Nama lokasi.
 - Informasi lokasi berdasarkan koordinat GPS.
-
 
 ---
 
@@ -65,10 +65,10 @@ Informasi yang ditampilkan:
 Aplikasi menampilkan informasi cuaca berdasarkan lokasi pengguna.
 
 Fitur:
+
 - Mengambil koordinat lokasi pengguna.
 - Menghubungkan lokasi dengan layanan cuaca.
 - Menampilkan kondisi cuaca berdasarkan lokasi.
-
 
 ---
 
@@ -79,16 +79,18 @@ Aplikasi menerapkan sistem permission native Android.
 Permission yang digunakan:
 
 ### CAMERA
+
 Digunakan untuk mengambil foto check-in melalui kamera perangkat.
 
 ### READ_MEDIA_IMAGES
+
 Digunakan untuk memilih foto dari galeri.
 
 ### ACCESS_FINE_LOCATION
+
 Digunakan untuk mendapatkan lokasi pengguna melalui GPS.
 
 Apabila permission ditolak, aplikasi tetap berjalan tanpa mengalami crash.
-
 
 ---
 
@@ -102,30 +104,29 @@ Aplikasi telah dikonfigurasi menggunakan:
 - EAS CLI
 - Android APK Build
 
-Build Profile:
+Build Profile
 
-```
+```text
 preview
 ```
 
-Output:
+Output
 
-```
+```text
 Android APK
 ```
 
-Perintah build:
+Perintah build
 
 ```bash
 eas build --platform android --profile preview
 ```
 
-Status Build:
+Status Build
 
-```
+```text
 FINISHED ✅
 ```
-
 
 ---
 
@@ -139,88 +140,129 @@ https://expo.dev/accounts/ruthangelsitorus/projects/checkinku-pro/builds/dd0f45f
 
 Melalui link tersebut pengguna dapat melihat hasil build EAS dan melakukan instalasi APK.
 
-
 ---
 
 # 🎨 Build Assets
 
 Aplikasi menggunakan asset custom untuk kebutuhan release.
 
-
 ## App Icon
 
-File:
+<p align="center">
+<img src="assets/icon.png" width="180">
+</p>
 
-```
+File
+
+```text
 assets/icon.png
 ```
 
-Spesifikasi:
+Spesifikasi
 
 - Format PNG.
 - Ukuran 1024 × 1024 px.
 - Desain khusus aplikasi CheckInKu Pro.
 
-
 ---
 
 ## Adaptive Icon
 
-File:
+<p align="center">
+<img src="assets/adaptive-icon.png" width="180">
+</p>
 
-```
+File
+
+```text
 assets/adaptive-icon.png
 ```
 
 Digunakan sebagai icon launcher Android dengan logo berada di tengah dan memiliki padding.
 
-
 ---
 
 ## Splash Screen
 
-File:
+<p align="center">
+<img src="assets/splash.png" width="220">
+</p>
 
-```
+File
+
+```text
 assets/splash.png
 ```
 
 Digunakan sebagai tampilan awal aplikasi saat aplikasi dibuka.
 
-Background:
+Background
 
-```
+```text
 #0A84FF
 ```
-
 
 ---
 
 # 📸 Screenshot Bukti Aplikasi
 
-Screenshot dokumentasi tersedia pada folder:
+Screenshot dokumentasi tersedia pada folder
 
-```
+```text
 screenshots/
 ```
 
-Bukti yang disertakan:
+## 1. EAS Build Finished
 
-1. EAS Build Finished.
-2. EAS Dashboard Build.
-3. Instalasi APK.
-4. Struktur Project.
-5. Splash Screen aplikasi.
-6. Permission Screen.
-7. Halaman Check-In Camera & Location.
-8. Icon aplikasi pada Home Screen.
+![](screenshots/01_eas_build_finished.jpeg)
 
+---
+
+## 2. EAS Dashboard Build
+
+![](screenshots/02_eas_dashboard_finished.jpeg)
+
+---
+
+## 3. Instalasi APK
+
+![](screenshots/03_install_apk.jpeg)
+
+---
+
+## 4. Struktur Project
+
+![](screenshots/04_project_structure.jpeg)
+
+---
+
+## 5. Splash Screen Aplikasi
+
+![](screenshots/05_splash_screen_aplikasi.jpeg)
+
+---
+
+## 6. Permission Screen
+
+![](screenshots/06_home_permission_screen.jpeg)
+
+---
+
+## 7. Halaman Check-In Camera & Location
+
+![](screenshots/07_checkin_camera_location_screen.jpeg)
+
+---
+
+## 8. Icon Aplikasi pada Home Screen
+
+![](screenshots/08_app_icon_home_screen.jpeg)
 
 ---
 
 # 🛠 Tech Stack
 
-Teknologi yang digunakan:
+Teknologi yang digunakan
 
 - React Native
 - Expo
@@ -232,7 +274,6 @@ Teknologi yang digunakan:
 - Open-Meteo Weather API
 - Expo Application Services (EAS)
 
-
 ---
 
 # ▶️ Cara Menjalankan Project
@@ -243,20 +284,17 @@ Teknologi yang digunakan:
 git clone https://github.com/ruthangll/CheckInKu-Pro.git
 ```
 
-
 ## 2. Masuk Folder Project
 
 ```bash
 cd CheckInKu-Pro
 ```
 
-
 ## 3. Install Dependency
 
 ```bash
 npm install
 ```
-
 
 ## 4. Jalankan Project
 
@@ -269,21 +307,19 @@ Aplikasi dapat dijalankan menggunakan:
 - Expo Go.
 - Android APK hasil EAS Build.
 
-
 ---
 
 # 🔗 Expo Snack
 
-Versi interaktif aplikasi dapat dicoba melalui Expo Snack:
+Versi interaktif aplikasi dapat dicoba melalui Expo Snack
 
 https://snack.expo.dev/@ruthangelsitorus/checkinku-proo
-
 
 ---
 
 # 📂 Struktur Project
 
-```
+```text
 CheckInKu-Pro
 │
 ├── App.js
@@ -306,9 +342,7 @@ CheckInKu-Pro
     ├── 06_home_permission_screen.jpeg
     ├── 07_checkin_camera_location_screen.jpeg
     └── 08_app_icon_home_screen.jpeg
-
 ```
-
 
 ---
 
@@ -318,14 +352,10 @@ CheckInKu-Pro
 
 Universitas Prima Indonesia
 
-Mata Kuliah:
+Mata Kuliah
 
 Praktek Pemrograman Mobile (React Native)
 
-Project:
+Project
 
 **CheckInKu Pro**
-
-Mission:
-
-**Misi 14 — Menyiapkan Aplikasi untuk Rilis (Release Candidate)**
